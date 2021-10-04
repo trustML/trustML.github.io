@@ -38,7 +38,93 @@
   <div class="col-md-3 stitle">overview</div>
   <div class="col-md-7">
     <p>
-      TODO
+      Over the last two decades, there has been tremendous progress in leveraging machine learning to solve fundamental problems in artificial intelligence. Nevertheless, a number of challenges remain for deploying these techniques in real-world applications. Our research focuses on addressing three key challenges:
+      <ul>
+      <li>
+	<b>Correctness:</b> We have developed PAC prediction sets that capture uncertainty with provable correctness guarantees [<a href="https://arxiv.org/abs/2001.00106">ICLR 2020</a>], as well as model predictive shielding for ensuring safety of learned controllers [<a href="https://arxiv.org/abs/1910.10885">ICRA 2020</a>, <a href="https://arxiv.org/abs/1905.10691">ACC 2021</a>, <a href="./docs/rss21.pdf">RSS 2021</a>, <a href="https://arxiv.org/abs/2011.00716">ICLR 2021</a>] and algorithms for risk-aware offline reinforcement learning [<a href="https://arxiv.org/abs/2107.06106">NeurIPS 2021</a>].
+      </li>
+      <li>
+	<b>Programmability:</b> We have developed algorithms for end-user programming of machine learning systems, for instance, synthesizing programs with machine learning components [<a href="./docs/pldi21.pdf">PLDI 2021</a>], enabling users to guide deep generative models [<a href="https://arxiv.org/abs/1901.08565">ICML 2019</a>], and reinforcement learning from high-level specifications [<a href="/docs/neurips19.pdf">NeurIPS 2019</a>, <a href="https://arxiv.org/abs/2010.15638">AISTATS 2021</a>, <a href="https://arxiv.org/abs/2106.13906">NeurIPS 2021</a>, <a href="https://arxiv.org/abs/2102.11137">NeurIPS 2021</a>]. We are also working on improving human-AI interfaces [<a href="https://arxiv.org/abs/1911.06473">AIES 2020</a>, <a href="https://arxiv.org/abs/2011.06169">ICML 2020</a>, <a href="https://arxiv.org/abs/2108.08454">ICML HumanAI Workshop</a>].
+      </li>
+      <li>
+	<b>Efficiency:</b> We have developed techniques for leveraging uncertainty to chain fast, inaccurate models with slow, accurate ones [<a href="https://arxiv.org/abs/2011.00716">ICLR 2021</a>]. We have also leveraged deep learning to speed up systems [<a href="https://arxiv.org/abs/1711.08029">PLDI 2018</a>, <a href="/docs/oopsla19b.pdf">OOPSLA 2019</a>], incorporating off-policy data to improve performance [<a href="/docs/cav20.pdf">CAV 2020</a>].
+      </li>
+      </ul>
+    </p>
+    <p>
+       We discuss our work along each of these three thrusts in more detail below. Our approaches draw on techniques spanning learning theory, programming languages, formal methods, and control theory; furthermore, we are interested in applications to robotics, healthcare, and software systems, among others.
+    </p>
+    <p>
+      Currently, we are particularly interested in understanding robust generalization (i.e., to out-of-distribution examples), which is a critical feature of human learning that is lacking in deep learning. From a theoretical perspective, we have drawn a connection between robust generalization and model identification [<a href="https://arxiv.org/abs/2109.10935">ICML UDL Workshop 2021</a>]; intuitively, to robustly generalize, a learning algorithm must be able to identify the “true” model. From a practical standpoint, we have shown that program synthesis can generalize robustly [<a href="./docs/iclr20a.pdf">ICLR 2020</a>, EMNLP (Findings) 2021], and have developed algorithms for quantifying uncertainty in the face of distribution shift [<a href="https://arxiv.org/abs/1901.08562">AISTATS 2020</a>, <a href="https://arxiv.org/abs/2106.09848">ICML UDL Workshop 2021</a>].
+    </p>
+  </div>
+</div>
+
+<br/>
+
+<div class="row txt">
+  <div class="col-md-3 stitle">correctness</div>
+  <div class="col-md-7">
+    How can we build machine learning systems with correctness guarantees?
+    <p>
+      <ul>
+	<li>
+	  <b>Uncertainty quantification:</b> We have developed algorithms for constructing PAC prediction sets, which can capture uncertainty in a rigorous way [<a href="https://arxiv.org/abs/2001.00106">ICLR 2020</a>]. We are working on leveraging these ideas to enable correct-by-construction synthesis of programs with machine learning components.
+	</li>
+	<li>
+	  <b>Safe reinforcement learning:</b> We have developed model predictive shielding, a strategy for ensuring safety of learned controllers [<a href="https://arxiv.org/abs/1910.10885">ICRA 2020</a>, <a href="https://arxiv.org/abs/1905.10691">ACC 2021</a>, <a href="./docs/rss21.pdf">RSS 2021</a>, <a href="https://arxiv.org/abs/2011.00716">ICLR 2021</a>]. We are working on applying these techniques to human-interactive control [<a href="https://socialrobotnavigation.github.io/papers/paper14.pdf">RSS Social Navigation Workshop 2021</a>]. We have also developed risk-aware offline reinforcement learning algorithms [<a href="https://arxiv.org/abs/2107.06106">NeurIPS 2021</a>], and algorithms for learning programmatic policies that are easier to verify [<a href="https://arxiv.org/abs/1805.08328">NeurIPS 2018</a>, <a href="./docs/iclr20a.pdf">ICLR 2020</a>, <a href="https://arxiv.org/abs/2101.03238">NeurIPS 2020</a>].
+	</li>
+	<li>
+	  <b>Fairness:</b> We have developed statistical verification algorithms for efficiently checking fairness [<a href="https://arxiv.org/abs/1812.02573">OOPSLA 2019</a>], as well as algorithms for ensuring fairness in reinforcement learning [<a href="https://arxiv.org/abs/1901.08568">AISTATS 2021</a>].
+	</li>
+	<li>
+	  <b>Robustness:</b> We have developed algorithms for measuring adversarial robustness [<a href="./docs/nips16.pdf">NeurIPS 2016</a>]. We have also shown that program synthesis can generalize robustly [<a href="./docs/iclr20a.pdf">ICLR 2020</a>, EMNLP (Findings) 2021], and have drawn a connection between robust generalization and model identification [<a href="https://arxiv.org/abs/2109.10935">ICML UDL Workshop 2021</a>]. Finally, we have developed algorithms for quantifying uncertainty in the face of distribution shift [<a href="https://arxiv.org/abs/1901.08562">AISTATS 2020</a>, <a href="https://arxiv.org/abs/2106.09848">ICML UDL Workshop 2021</a>].
+	</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<br/>
+
+<div class="row txt">
+  <div class="col-md-3 stitle">programmability</div>
+  <div class="col-md-7">
+    How can we make it easier for end users to leverage machine learning?
+    <p>
+      <ul>
+	<li>
+	  <b>Synthesizing machine learning programs:</b> We have developed algorithms for synthesizing programs that include machine learning components, for instance, to query websites based on both syntactic and semantic information [<a href="./docs/pldi21.pdf">PLDI 2021</a>].
+	</li>
+	<li>
+	  <b>Programmable generation:</b> We have developed techniques for representing latent structure in deep generative models [<a href="https://arxiv.org/abs/1901.08565">ICML 2019</a>]; users can modify this structure to guide the generative process.
+	</li>
+	<li>
+	  <b>Programmable reinforcement learning:</b> We have developed high-level specification languages for reinforcement learning [<a href="/docs/neurips19.pdf">NeurIPS 2019</a>], along with algorithms that leverage these specifications to improve learning [<a href="https://arxiv.org/abs/2010.15638">AISTATS 2021</a>, <a href="https://arxiv.org/abs/2106.13906">NeurIPS 2021</a>, <a href="https://arxiv.org/abs/2102.11137">NeurIPS 2021</a>].
+	</li>
+	<li>
+	  <b>Human-AI interface:</b> We have worked on understanding how humans interact with machine learning systems; for instance, post-hoc explanations can be misleading [<a href="https://arxiv.org/abs/1911.06473">AIES 2020</a>], motivating the need for robust explanations [<a href="https://arxiv.org/abs/2011.06169">ICML 2020</a>]. We are currently working on understanding whether machine learning can improve human decision-making [<a href="https://arxiv.org/abs/2108.08454">ICML HumanAI Workshop</a>].
+	</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<br/>
+
+<div class="row txt">
+  <div class="col-md-3 stitle">efficiency</div>
+  <div class="col-md-7">
+    <p>
+      How can we ensure machine learning systems run efficiently?
+      <ul>
+	<li>
+	  <b>Fast inference:</b> We have developed techniques for leveraging uncertainty estimates to chain fast, inaccurate models with slow, accurate ones [<a href="https://arxiv.org/abs/2011.00716">ICLR 2021</a>]. We have also developed algorithms for compressing reinforcement learning policies into compact decision trees [<a href="https://arxiv.org/abs/1805.08328">NeurIPS 2018</a>].
+	</li>
+	<li>
+	  <b>Machine learning for systems:</b> We have leveraged deep learning to speed up systems such as theorem provers [<a href="/docs/oopsla19b.pdf">OOPSLA 2019</a>] and program synthesizers [<a href="https://arxiv.org/abs/1711.08029">PLDI 2018</a>], along with techniques for incorporating off-policy data to improve performance [<a href="/docs/cav20.pdf">CAV 2020</a>].
+	</li>
+      </ul>
     </p>
   </div>
 </div>
