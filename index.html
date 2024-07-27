@@ -26,8 +26,6 @@
   &nbsp;&nbsp;&nbsp;&nbsp;
   <span class="htitle"><a href="./people.html">people</a></span>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <span class="htitle"><a href="./research.html">research</a></span>
-  &nbsp;&nbsp;&nbsp;&nbsp;
   <span class="htitle"><a href="./publications.html">publications</a></span>
 </div>
 
@@ -38,9 +36,25 @@
   <div class="col-md-3 stitle">about</div>
   <div class="col-md-7">
     <p>
-      The Trustworthy Machine Learning Group is a research group at Penn led by <a href="https://obastani.github.io">Osbert Bastani</a>. Our goal is to develop novel techniques for building systems that incorporate machine learning components, focusing on their correctness, programmability, and efficiency. We draw on techniques spanning learning theory, programming languages, formal methods, and control theory, and are interested in applications including robotics, healthcare, and software systems. Our research directions are detailed <a href="./research.html">here</a>.
+      The Trustworthy Machine Learning Group is a research group at Penn led by <a href="https://obastani.github.io">Osbert Bastani</a>. We are interested in problems at the intersection of programming languages and machine learning, including both how programming languages techniques can be applied to building more trustworthy machine learning systems as well as how machine learning can improve programmer productivity.
     </p>
-
+  </div>
+  <div class="col-md-3 stitle">research</div>
+  <div class="col-md-7">
+    <p>
+      Machine learning is revolutionizing the way we develop software. On the one hand, machine learning models such as deep neural networks (DNNs) are increasingly being incorporated into software, forming neurosymbolic systems. These programs are arising in safety-critical applications such as robotics, as well as human-AI systems such as healthcare and judicial decision-making. Simultaneously, programming assistants based primarily on large language models (LLMs) are becoming ubiquitous, helping programmers write code, find bugs, and generate test suites. The goal of my research is to design novel tools to make it easier to develop software in the age of machine learning. It can be organized into three directions:
+      <ul>
+	<li>
+	  <b>Trustworthy neurosymbolic systems:</b> How can we ensure that neurosymbolic systems are trustworthy when they include intrinsically fallible components (i.e., machine learning models)? We have designed novel techniques that can provide probabilistic guarantees for neurosymbolic systems. Our techniques leverage uncertainty quantification to provide probabilistic guarantees for individual machine learning components; then, they compose them to obtain probabilistic guarantees for the overall system.
+	</li>
+	<li>
+	  <b>Synthesizing neurosymbolic programs:</b> Neurosymbolic programs can be significantly harder to develop compared to traditional programs due to the fuzzy nature of machine learning models. How can we make it easier to write neurosymbolic programs? Unlike traditional programming, where the specification is binary (either satisfied or not), in neurosymbolic programming, the specification is typically an objective function (e.g., accuracy). We have developed novel optimal synthesis algorithms that efficiently traverse the search space to identify the neurosymbolic program that optimizes a user-provided objective.
+	</li>
+	<li>
+	  <b>Machine learning for programmer productivity:</b> How can machine learning improve programmer productivity? How can we do so while ensuring the resulting code is trustworthy? We have leveraged machine learning in a number of programmer productivity tools including program synthesis, optimization, verification, and testing. In addition, we have worked on tools for rigorously quantifying the uncertainty of code completion models.
+	</li>
+      </ul>
+      See <a href="https://obastani.github.io/research.pdf">here</a> for additional details.
     </p>
   </div>
 </div>
